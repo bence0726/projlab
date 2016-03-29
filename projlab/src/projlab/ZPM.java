@@ -12,9 +12,12 @@ public class ZPM extends Elem {
     public ZPM() {
     }
 
-	@Override
+	/**
+	 * 
+	 */
 	public void Activate(Karakter k) {
-		System.out.println("ZPM.Activate():: Meghívom Karakter.addZPM() metódust...\n");		
+		System.out.println("ZPM.Activate():: Meghívom Karakter.addZPM() metódust...\n");
+		k.addZPM();
 	}
 
 	@Override

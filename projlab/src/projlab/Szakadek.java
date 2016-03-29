@@ -14,7 +14,7 @@ public class Szakadek extends Elem {
 
 	@Override
 	public void Activate(Karakter k) {
-		System.out.println("Szakadék.Activate():: Meghaltál!");		
+		System.out.println("Szakadék.Activate():: Meghaltál!\n");		
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public class VegeElem extends Elem {
 		System.out.println("VegeElem.Activate():: Nála van az összes ZPM? I/N");
 		answer=in.readLine();
 		if(answer.toUpperCase().equals("I"))
-			System.out.println("VegeElem.Activate():: Gratulálok, nyertél!");
+			JatekMotor.EndGame(true);
 		else return;
 	}
 

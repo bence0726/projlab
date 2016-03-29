@@ -62,7 +62,7 @@ public class Karakter {
     /**
      * @param val
      */
-    public void setPos(Vektor val) {
+    public static void setPos(Vektor val) {
         System.out.println("Karakter.setPos():: A Karakter pozícióját a kívánt értékre állítottam.\n");
     }
 
@@ -107,6 +107,7 @@ public class Karakter {
         if(e == null)return;
         if(!e.getReachable())//Ha nem lehet rálépni, return!
         	return;
+        Karakter.setPos(new Vektor());
         
         
         e.Activate(new Karakter());
