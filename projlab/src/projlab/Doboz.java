@@ -6,10 +6,9 @@ import java.util.*;
  */
 public class Doboz extends Elem {
 
-    /**
-     * Default constructor
-     */
+     
     public Doboz() {
+    	System.out.println("Doboz konstruktor");
     }
 
     /**
