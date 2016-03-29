@@ -1,11 +1,15 @@
 package projlab;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 /**
  * dontLove IIT!
  */
 public class Labirintus {
-
+	static String answer;
+	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     /**
      * Default constructor
      */
@@ -70,11 +74,23 @@ public class Labirintus {
     /**
      * @param ter 
      * @return
+     * @throws IOException 
      */
-    public Elem WhatsThere(Terulet ter) {
-        // TODO implement here
-        return null;
+    public static Elem WhatsThere(Terulet ter) throws IOException {
+    	
+    switch(Menu.n){
+    	case 10: 
+    		System.out.println("10.1 A karakter a vége elemre került? I/N");
+    		answer=in.readLine();
+    		if(answer.toUpperCase().equals("I"))
+    			return new VegeElem();
+    		else return null;
     }
+	return null;
+    		
+    }
+        
+    
 
     /**
      * @return

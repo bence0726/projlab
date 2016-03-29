@@ -1,5 +1,6 @@
 package projlab;
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -100,9 +101,16 @@ public class Karakter {
 
     /**
      * @param dir
+     * @throws Exception 
      */
-    public void Move(Vektor dir) {
-        // TODO implement here
+    public static void Move(Vektor dir) throws Exception {
+        System.out.println("Karakter.Move():: Kedves labirintus: mi van itt?");
+        
+        Elem  e = Labirintus.WhatsThere(new Terulet());
+        if(e == null)return;
+        
+        e.Activate(new Karakter());
+        
     }
 
     /**
