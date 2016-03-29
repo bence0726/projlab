@@ -79,6 +79,12 @@ public class Labirintus {
     public static Elem WhatsThere(Terulet ter) throws IOException {
     	
     switch(Menu.n){
+    case 8:
+    	System.out.println("Labirintus.WhatsThere():: A karakter ZPM-re lépett? I/N");
+    	answer=in.readLine();
+    	if(answer.toUpperCase().equals("I"))
+    		return new ZPM();
+    	return null;//Ha nincs itt semmi, null-t adunk vissza.
     case 9:
     	System.out.println("Labirintus.WhatsThere():: A karakter szakadékba lépett? I/N");
     	answer=in.readLine();
@@ -86,15 +92,15 @@ public class Labirintus {
     	{
     		return new Szakadek();
     	}
-    	return null;
+    	return null;//Ha nincs itt semmi, null-t adunk vissza.
     case 10: 
     		System.out.println("Labirintus.WhatsThere():: A karakter a vége elemre került? I/N");
     		answer=in.readLine();
     		if(answer.toUpperCase().equals("I"))
     			return new VegeElem();
-    		else return null;
+    		else return null;//Ha nincs itt semmi, null-t adunk vissza.
     }
-	return null;
+	return null;//Ha nincs itt semmi, null-t adunk vissza.
     		
     }
         

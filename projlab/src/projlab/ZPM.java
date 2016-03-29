@@ -14,8 +14,7 @@ public class ZPM extends Elem {
 
 	@Override
 	public void Activate(Karakter k) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("ZPM.Activate():: Kedves Felhasználó, felvettél!");		
 	}
 
 	@Override

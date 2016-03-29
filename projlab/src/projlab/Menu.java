@@ -142,14 +142,7 @@ public class Menu {
 				else
 					;
 				break;
-		case 8:System.out.println("8.1 A karakter ZPM-re lépett? I/N");
-				answer=in.readLine();
-				if(answer.toUpperCase().equals("I"))
-				{
-					
-				}
-				else
-					;
+		case 8:Karakter.Move(new Vektor());
 				break;
 		case 9:Karakter.Move(new Vektor());
 				break;
