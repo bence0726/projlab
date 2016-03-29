@@ -79,8 +79,16 @@ public class Labirintus {
     public static Elem WhatsThere(Terulet ter) throws IOException {
     	
     switch(Menu.n){
-    	case 10: 
-    		System.out.println("10.1 A karakter a vége elemre került? I/N");
+    case 9:
+    	System.out.println("Labirintus.WhatsThere():: A karakter szakadékba lépett? I/N");
+    	answer=in.readLine();
+    	if(answer.toUpperCase().equals("I"))
+    	{
+    		return new Szakadek();
+    	}
+    	return null;
+    case 10: 
+    		System.out.println("Labirintus.WhatsThere():: A karakter a vége elemre került? I/N");
     		answer=in.readLine();
     		if(answer.toUpperCase().equals("I"))
     			return new VegeElem();

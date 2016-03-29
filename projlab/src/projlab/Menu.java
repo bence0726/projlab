@@ -151,11 +151,7 @@ public class Menu {
 				else
 					;
 				break;
-		case 9:System.out.println("9.1 A karakter szakadékba lépett? I/N");
-				answer=in.readLine();
-				if(answer.toUpperCase().equals("I"))
-				{
-				}
+		case 9:Karakter.Move(new Vektor());
 				break;
 		case 10:Karakter.Move(new Vektor());
 				break;

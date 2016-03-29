@@ -14,8 +14,7 @@ public class Szakadek extends Elem {
 
 	@Override
 	public void Activate(Karakter k) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Szakadék.Activate():: Meghaltál!");		
 	}
 
 	@Override
