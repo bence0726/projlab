@@ -8,12 +8,6 @@ import java.util.*;
 public abstract class Elem {
 
     /**
-     * Default constructor
-     */
-    public Elem() {
-    }
-
-    /**
      * 
      */
     private boolean reachable;
@@ -42,62 +36,74 @@ public abstract class Elem {
     /**
      * @param img
      */
-    public void Elem(File img) {
-        // TODO implement here
+    public Elem(File img, boolean reach, boolean fire, boolean pick, Terulet po) {
+    	System.out.println("Elem:: Létrejön egy elem a megadott paraméterek alapján.");
+    	this.fireable=fire;
+    	this.image=img;
+    	this.pickable=pick;
+    	this.pos=po;
+    	this.reachable=reach;
+    	
     }
 
     /**
      * @param val
      */
     public void setReachable(boolean val) {
-        // TODO implement here
+    	System.out.println("setReachable("+val+"):: Az elem elérhetővé/elérhetetlenné  válik.");
+    	reachable=val;
     }
 
     /**
      * @return
      */
     public boolean getReachable() {
-        // TODO implement here
-        return true;
+    	System.out.println("getReachable():: Az elem elérhetősége: " + reachable);
+    	
+        return reachable;
     }
 
     /**
      * @return
      */
     public boolean getFireable() {
-        // TODO implement here
-        return true;
+    	System.out.println("getFireable():: Az elem lőhetősége: "+ fireable);
+    	
+        return fireable;
     }
 
     /**
      * @return
      */
     public boolean getPickable() {
-        // TODO implement here
-        return true;
+    	System.out.println("getPickable():: Az elem felvehetősége: "+ pickable);
+    	
+        return pickable;
     }
 
     /**
      * @return
      */
     public Terulet getPos() {
-        // TODO implement here
-        return null;
+    	System.out.println("getPos():: Az elem helyzete: "+ pos);
+        return pos;
     }
 
     /**
      * @param val
      */
     public void setImage(File val) {
-        // TODO implement here
+    	System.out.println("setImage(File val):: Az elem képének változtatása: ");
+    	this.image=val;
     }
 
     /**
      * @return
      */
     public File getImage() {
-        // TODO implement here
-        return null;
+    	System.out.println("getImage():: Az elem képének lekérdezése: ");
+    	
+        return image;
     }
 
     /**
