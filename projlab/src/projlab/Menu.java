@@ -8,8 +8,7 @@ public class Menu {
 
 	public static void main(String[] args) throws IOException {
 		
-	
-		Scanner menu= new Scanner(System.in);
+		Scanner menu = new Scanner(System.in);
 		
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		String answer;
