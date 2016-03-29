@@ -117,30 +117,11 @@ public class Menu {
 				else
 					;
 				break;
-		case 6:System.out.println("6.1 A lövedék eltalált valamit? I/N");
-				answer=in.readLine();
-				if(answer.toUpperCase().equals("I"))
-				{
-					System.out.println("6.2 Amit eltalált speciális fal volt? I/N");
-						answer=in.readLine();
-							if(answer.toUpperCase().equals("N"))
-							{
-						
-							}
-							else
-								;
-				}
-				else
-					;
+		case 6: Fegyver.Fire(new Vektor(), "sarga", new Karakter());
+			
+			
 				break;
-		case 7:System.out.println("7.1 A karakter olyan speciális falra lépett amin van nyitott csillag kapu? I/N");
-				answer=in.readLine();
-				if(answer.toUpperCase().equals("I"))
-				{
-	
-				}
-				else
-					;
+		case 7:Karakter.Move(new Vektor());
 				break;
 		case 8:Karakter.Move(new Vektor());
 				break;
@@ -148,7 +129,6 @@ public class Menu {
 				break;
 		case 10:Karakter.Move(new Vektor());
 				break;
-		
 		}
 		
 	}

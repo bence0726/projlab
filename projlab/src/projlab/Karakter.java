@@ -88,6 +88,10 @@ public class Karakter {
         System.out.println("Karakter.getZPM:: Küldöm a ZPM-eim számát.");
         return 1;//TODO most fix, később módosítani!
     }
+    
+    public Fegyver getFegyver(){
+    	return new Fegyver();
+    }
 
     /**
      * 
@@ -127,5 +131,6 @@ public class Karakter {
     public void Drop(Vektor dir) {
         // TODO implement here
     }
+    
 
 }
