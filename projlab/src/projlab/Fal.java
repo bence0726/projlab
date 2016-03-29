@@ -2,7 +2,7 @@ package projlab;
 import java.util.*;
 
 /**
- * 
+ * LZ iz dö best <3
  */
 public class Fal extends Elem {
 

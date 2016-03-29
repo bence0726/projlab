@@ -4,7 +4,7 @@ package projlab;
 import java.util.*;
 
 /**
- *  Proba 2.
+ *  Probba 2.
  */
 public class Coord {
 
