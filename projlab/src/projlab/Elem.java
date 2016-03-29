@@ -55,8 +55,8 @@ public abstract class Elem {
     /**
      * @param val
      */
-    public void setReachable(boolean val) {
-    	System.out.println("setReachable("+val+"):: Az elem elérhetővé/elérhetetlenné válik.");
+    public void setReachable(/*boolean val*/) {
+    	System.out.println("setReachable():: Az elem elérhetővé/elérhetetlenné válik.");
     	//reachable=val;
     }
 
@@ -64,11 +64,16 @@ public abstract class Elem {
      * @return
      * @throws IOException 
      */
-    public boolean getReachable() throws IOException {
+    public boolean getReachable(){
     	
     	System.out.println("getReachable():: Az elem elérhető? I/N ");
     	
-    	answer=in.readLine();
+    	try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(answer.toUpperCase().equals("I"))
 			return true;
 		else
@@ -80,10 +85,15 @@ public abstract class Elem {
      * @return
      * @throws IOException 
      */
-    public boolean getFireable() throws IOException {
+    public boolean getFireable(){
     	System.out.println("getFireable():: Az elem lőhető? I/N ");
     	
-    	answer=in.readLine();
+    	try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(answer.toUpperCase().equals("I"))
 			return true;
 		else
@@ -94,10 +104,15 @@ public abstract class Elem {
      * @return
      * @throws IOException 
      */
-    public boolean getPickable() throws IOException {
+    public boolean getPickable(){
     	System.out.println("getPickable():: Az elem felvehető? I/N ");
     	
-    	answer=in.readLine();
+    	try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(answer.toUpperCase().equals("I"))
 			return true;
 		else
@@ -115,7 +130,7 @@ public abstract class Elem {
     /**
      * @param val
      */
-    public void setImage(File val) {
+    public void setImage() {
     	System.out.println("setImage(File val):: Az elem képének változtatása: ");
     	//this.image=val;
     }
