@@ -17,40 +17,6 @@ public class Labirintus {
     }
 
     /**
-     * 
-     */
-    private int osszZPM;
-
-    /**
-     * 
-     */
-    private Vektor KezdoPont;
-
-    /**
-     * 
-     */
-    private Elem VegeElem;
-
-
-
-    /**
-     * 
-     */
-    private Karakter kar;
-
-    /**
-     * 
-     */
-    private Set<Elem> list;
-
-    /**
-     * 
-     */
-    public void Labirintus() {
-        // TODO implement here
-    }
-
-    /**
      * @param kar
      */
     public void AddKar(Karakter kar) {
@@ -68,7 +34,7 @@ public class Labirintus {
      * @param param
      */
     public void RemoveElem(Elem param) {
-        // TODO implement here
+        System.out.println("Labirintus.RemoveElem():: A kapott elemet kidobtam a listámból.");
     }
 
     /**
@@ -109,9 +75,17 @@ public class Labirintus {
     /**
      * @return
      */
-    public int getZPM() {
-        // TODO implement here
-        return 0;
+    public static int getZPM() {
+        System.out.println("Labirintus.getZPM(): Kedves Felhasználó, hány ZPM volt a játék kezdetén?");
+        int i = 0;
+        try {
+			String szam=in.readLine();
+			i = Integer.parseInt(szam);//string --> int
+		} catch (IOException e) {
+			// TODO Majd töröld ki, csak szkeleton miatt kell
+			e.printStackTrace();
+		}
+        return i;
     }
 
     /**
