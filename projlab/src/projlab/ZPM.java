@@ -14,7 +14,7 @@ public class ZPM extends Elem {
 
 	@Override
 	public void Activate(Karakter k) {
-		System.out.println("ZPM.Activate():: Kedves Felhasználó, felvettél!");		
+		System.out.println("ZPM.Activate():: Meghívom Karakter.addZPM() metódust...\n");		
 	}
 
 	@Override
