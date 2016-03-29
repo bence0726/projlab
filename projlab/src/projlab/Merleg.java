@@ -9,8 +9,8 @@ public class Merleg extends Elem {
     /**
      * Default constructor
      */
-    public Merleg(Elem E, Fal ajto) {
-        // TODO implement here
+    public Merleg(/*Elem E, Fal ajto*/) {
+    	System.out.println("Merleg:: Létrejön egy merleg a megadott paraméterek alapján.");
     }
 
     /**
@@ -25,13 +25,16 @@ public class Merleg extends Elem {
 
 	@Override
 	public void Activate(Karakter k) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Merleg.Activate:: Aktiválódik a merleg.");
+		Fal tmp=new Fal();
+		tmp.setReachable();		
 	}
 
 	@Override
 	public void deActivate() {
-		// TODO Auto-generated method stub
+		System.out.println("Merleg.deActivate:: Deaktiválódik a merleg.");
+		Fal tmp=new Fal();
+		tmp.setReachable();
 		
 	}
 

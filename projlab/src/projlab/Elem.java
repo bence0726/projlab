@@ -49,67 +49,99 @@ public abstract class Elem {
     /**
      * @param val
      */
-    public void setReachable(boolean val) {
-    	System.out.println("setReachable("+val+"):: Az elem elérhetővé/elérhetetlenné  válik.");
-    	reachable=val;
+    public void setReachable(/*boolean val*/) {
+    	System.out.println("setReachable():: Az elem elérhetővé/elérhetetlenné válik.");
+    	//reachable=val;
     }
 
     /**
      * @return
+     * @throws IOException 
      */
-    public boolean getReachable() {
-    	System.out.println("getReachable():: Az elem elérhetősége: " + reachable);
+    public boolean getReachable(){
     	
-        return reachable;
+    	System.out.println("getReachable():: Az elem elérhető? I/N ");
+    	
+    	try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(answer.toUpperCase().equals("I"))
+			return true;
+		else
+			return false;
+        
     }
 
     /**
      * @return
+     * @throws IOException 
      */
-    public boolean getFireable() {
-    	System.out.println("getFireable():: Az elem lőhetősége: "+ fireable);
+    public boolean getFireable(){
+    	System.out.println("getFireable():: Az elem lőhető? I/N ");
     	
-        return fireable;
+    	try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(answer.toUpperCase().equals("I"))
+			return true;
+		else
+			return false;
     }
 
     /**
      * @return
+     * @throws IOException 
      */
-    public boolean getPickable() {
-    	System.out.println("getPickable():: Az elem felvehetősége: "+ pickable);
+    public boolean getPickable(){
+    	System.out.println("getPickable():: Az elem felvehető? I/N ");
     	
-        return pickable;
+    	try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(answer.toUpperCase().equals("I"))
+			return true;
+		else
+			return false;
     }
 
     /**
      * @return
      */
     public Terulet getPos() {
-    	System.out.println("getPos():: Az elem helyzete: "+ pos);
-        return pos;
+    	System.out.println("getPos():: Az elem helyzete: xyz");
+        return new Terulet();
     }
 
     /**
      * @param val
      */
-    public void setImage(File val) {
+    public void setImage() {
     	System.out.println("setImage(File val):: Az elem képének változtatása: ");
-    	this.image=val;
+    	//this.image=val;
     }
 
-    /**
-     * @return
+  /**
+     * @return 
+     * Itt File-nak kéne lennie, de szkeletonhoz csak Objectet írtunk, majd át kell írni.
      */
-    public File getImage() {
+    public Object getImage() {
     	System.out.println("getImage():: Az elem képének lekérdezése: ");
     	
-        return image;
+        return new Object();
     }
-
     /**
      * @param k
      */
-    public abstract void Activate(Karakter k) throws Exception;
+    public abstract void Activate(Karakter k);
 
     /**
      * 
