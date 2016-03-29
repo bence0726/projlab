@@ -49,12 +49,7 @@ public class Menu {
 					;
 				break;
 				
-		case 2: System.out.println("2.1 A karakter mérlegre lépett a következő lépésnél?  I/N ");
-				answer=in.readLine();
-				if(answer.toUpperCase().equals("I"))
-					;
-				else
-					;
+		case 2: Karakter.Move(new Vektor());
 				break;
 				
 		case 3:System.out.println("3.1 A karakter talál utat a mérlegről lelépve? I/N");

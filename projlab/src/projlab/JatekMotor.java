@@ -49,10 +49,14 @@ public class JatekMotor {
     }
 
     /**
-     * @param nyert_e
+     * @param nyert_e - nyertünk?
+     * 
      */
     public static void EndGame(boolean nyert_e) {
-        // TODO implement here
+        if(nyert_e)
+        	System.out.println("JatekMotor.EndGame():: Gratulálok, nyertél!");
+        else
+        	System.out.println("JatekMotor.EndGame():: Sajnálom, vesztettél!");
     }
 
 }
