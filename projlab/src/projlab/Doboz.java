@@ -10,7 +10,7 @@ public class Doboz extends Elem {
      * Default constructor
      */
     public Doboz() {
-    	System.out.println("Ctor of the box.");
+    	System.out.println("Doboz konstruktor");
     }
 
     /**
