@@ -18,12 +18,15 @@ public class Doboz extends Elem {
      */
     @Override
     public void Activate(Karakter k) {
-        // TODO implement here
+    	System.out.println("Doboz.Activate: A karakter felveszi a dobozt.");
+        
     }
 
     
     @Override
     public void deActivate(){
+    	System.out.println("Doboz.Activate: A karakter leteszi a dobozt.");
+        
     }
     }
 
