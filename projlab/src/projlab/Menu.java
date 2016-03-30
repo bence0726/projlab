@@ -41,9 +41,12 @@ public class Menu {
 		case 3:
 			Karakter.Move(new Vektor());
 			break;
-		case 4:Karakter.Pick(new Vektor());
-		
-		case 5:Karakter.Drop(new Vektor());
+		case 4:
+			Karakter.Pick(new Vektor());
+			break;		
+		case 5:
+			Karakter.Drop(new Vektor());
+			break;
 		case 6: Fegyver.Fire(new Vektor(), "sarga", new Karakter());
 				break;
 		case 7:Karakter.Move(new Vektor());

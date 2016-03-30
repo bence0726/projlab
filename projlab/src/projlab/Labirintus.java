@@ -58,8 +58,14 @@ public class Labirintus {
 			return new Doboz();
 		else 
 			return null;
+    	case 5:	
+        	System.out.println("Labirintus.WhatsThere():: Karakternél van doboz? I/N");
+    		answer=in.readLine();
+    		if(answer.toUpperCase().equals("I"))
+    			return new Doboz();
+    		else return null;//Ha nincs itt semmi, null-t adunk vissza.
         case 6:
-    		System.out.println("6.1 A lövedék eltalált valamit? I/N");
+    		System.out.println("Labirintus.WhatsThere():: A lövedék eltalált valamit? I/N");
     		answer=in.readLine();
         	if(answer.toUpperCase().equals("I"))
         		return new SpecFal();
@@ -93,13 +99,8 @@ public class Labirintus {
         								//csak rá lehessen lépni.
         	}
         	return null;//Ha nincs itt semmi, null-t adunk vissza.
-        	
-        case 43:	
-        	System.out.println("Labirintus.WhatsThere():: Karakternél van doboz? I/N");
-    		answer=in.readLine();
-    		if(answer.toUpperCase().equals("I"))
-    			return new Doboz();
-    		else return null;//Ha nincs itt semmi, null-t adunk vissza.		
+        case 666:
+        	return new VegeElem();        		
         }
     	return null;//Ha nincs itt semmi, null-t adunk vissza.
     	

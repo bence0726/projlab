@@ -162,7 +162,7 @@ public class Karakter {
 		//de készül róla backup:
     	int megnyomottMenu = Menu.n;//elkérjük a megnyomott menügomb értékét
 
-    	Menu.n = 43;				//ebből fogja tudni a WhatsThere(), hogy mi a szitu
+    	Menu.n = 42;				//ebből fogja tudni a WhatsThere(), hogy mi a szitu
     	System.out.println("Karakter.Move()::"
     			+ " Kedves labirintus: Van nálam doboz?");
 			//Megvizsgáljuk, hogy a karakter helyén van-e elem.
@@ -170,8 +170,8 @@ public class Karakter {
 		
     	Menu.n = megnyomottMenu;	//Visszaállítom a menügombot
 
-    	Elem e=	Labirintus.WhatsThere(new Terulet());
-    	if(e.getPickable()==true)
+    	Elem e = Labirintus.WhatsThere(new Terulet());
+    	if(e.getPickable())
     		e.Activate(new Karakter());
     	Karakter.changeBoxVal();
     	Labirintus.RemoveElem(e);	
@@ -182,27 +182,25 @@ public class Karakter {
      */
     
     	public static void Drop(Vektor dir) {
-        	System.out.println("Karakter.Drop:Karakternél van doboz? I/N");
-    		try {
-    			answer=in.readLine();
-    		} catch (IOException e) {
-    			// TODO Auto-generated catch block
-    			e.printStackTrace();
+    		//itt most gonoszul módosítani fogom a megnyomott gomb értékét,
+			//de készül róla backup:
+	    	int megnyomottMenu = Menu.n;//elkérjük a megnyomott menügomb értékét
+
+	    	Menu.n = 42;				//ebből fogja tudni a WhatsThere(), hogy mi a szitu
+				//Megvizsgáljuk, hogy a karakter helyén van-e elem.
+	    	Elem itteni = Labirintus.WhatsThere(new Karakter().getPos());
+			
+	    	Menu.n = megnyomottMenu;	//Visszaállítom a menügombot
+	    	
+         	Elem e=	Labirintus.WhatsThere(new Terulet());
+    		if(e.getReachable()==true){
+    			
+    			Labirintus.AddElem(new Doboz());
+    			Karakter.changeBoxVal();
+    		
+    			Menu.n = 666; //csalok
+    			e = Labirintus.WhatsThere(new Terulet());
+    			e.Activate(new Karakter());    			
     		}
-    			if(answer.toUpperCase().equals("I"))
-    			{
-    				Elem e=	Labirintus.WhatsThere(new Terulet());
-    				
-    				if(e.getReachable()==true){
-    					Labirintus.AddElem(new Doboz());
-    					Karakter.changeBoxVal();
-    					try {
-    						e.Activate(new Karakter());
-    					} catch (Exception e1) {
-    						// TODO Auto-generated catch block
-    						e1.printStackTrace();
-    					}
-    				}
-    			}
-        }
-    }
+    	}
+}
