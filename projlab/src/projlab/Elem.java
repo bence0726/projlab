@@ -1,5 +1,8 @@
 package projlab;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 /**
@@ -7,6 +10,9 @@ import java.util.*;
  */
 public abstract class Elem {
 
+	
+	BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	String answer;
     /**
      * 
      */
@@ -36,13 +42,13 @@ public abstract class Elem {
     /**
      * @param img
      */
-    public Elem(File img, boolean reach, boolean fire, boolean pick, Terulet po) {
-    	//System.out.println("Elem:: Létrejön egy elem a megadott paraméterek alapján.");
-    	//this.fireable=fire;
-    	//this.image=img;
-    	//this.pickable=pick;
-    	//this.pos=po;
-    	//this.reachable=reach;
+    public Elem(/*File img, boolean reach, boolean fire, boolean pick, Terulet po*/) {
+    	System.out.println("Elem:: Létrejön egy elem a megadott paraméterek alapján.");
+    	/*this.fireable=fire;
+    	this.image=img;
+    	this.pickable=pick;
+    	this.pos=po;
+    	this.reachable=reach;*/
     	
     }
 
@@ -129,7 +135,7 @@ public abstract class Elem {
     	//this.image=val;
     }
 
-  /**
+    /**
      * @return 
      * Itt File-nak kéne lennie, de szkeletonhoz csak Objectet írtunk, majd át kell írni.
      */
@@ -138,10 +144,11 @@ public abstract class Elem {
     	
         return new Object();
     }
+
     /**
      * @param k
      */
-    public abstract void Activate(Karakter k);
+    public abstract void Activate(Karakter k) throws Exception;
 
     /**
      * 
