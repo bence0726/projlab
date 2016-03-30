@@ -16,7 +16,8 @@ public class Fegyver {
     }
 
     /**
-     * 
+     * A skeletonban még nincs jelentősége.
+     * Lokális attribútumok híján nem megvalósítható.
      */
     private enum PortalStatus{};
  
