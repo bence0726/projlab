@@ -55,8 +55,11 @@ public abstract class Elem {
     /**
      * @param val
      */
-    public void setReachable(/*boolean val*/) {
-    	System.out.println("setReachable():: Az elem elérhetővé/elérhetetlenné válik.");
+    public void setReachable(boolean reachable) {
+    	if (reachable)
+    		System.out.println("setReachable():: Az elem elérhetővé válik.");
+    	else
+    		System.out.println("setReachable():: Az elem elérhetetlenné válik.");
     	//reachable=val;
     }
 
