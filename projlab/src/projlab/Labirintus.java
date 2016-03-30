@@ -52,6 +52,9 @@ public class Labirintus {
 			return new Doboz();
 		else 
 			return null;
+        case 6:
+    		System.out.println("6.1 A lövedék eltalált valamit? I/N");
+    		
         case 8:
         	System.out.println("Labirintus.WhatsThere():: A karakter ZPM-re lépett? I/N");
         	answer=in.readLine();
@@ -64,6 +67,15 @@ public class Labirintus {
         	if(answer.toUpperCase().equals("I"))
         	{
         		return new Szakadek();
+        	}
+        	return null;//Ha nincs itt semmi, null-t adunk vissza.
+        case 42:
+        	System.out.println("Labirintus.WhatsThere():: A karakter alatt van valami? I/N");
+        	answer=in.readLine();
+        	if(answer.toUpperCase().equals("I"))
+        	{
+        		return new VegeElem();	//majdnem mindegy, hogy mi, nem lényeges,
+        								//csak rá lehessen lépni.
         	}
         	return null;//Ha nincs itt semmi, null-t adunk vissza.
         case 10: 
