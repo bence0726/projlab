@@ -36,11 +36,10 @@ public class Fegyver {
     	Elem elem=null;
     	while (elem == null)
     		elem = Labirintus.WhatsThere(new Terulet());
-				if (elem.getReachable() && elem.getFireable())
-				{System.out.println("Tehát a lövedék speciális falat talált el,a portál létrejött az adott színnel");
-					elem.setReachable(true);
-					}
-						else System.out.println("Az elem nem spec. falat talált el így nem tudott kaput nyitni.");
+		if (elem.getReachable() && elem.getFireable()){
+			System.out.println("Tehát a lövedék speciális falat talált el,a portál létrejött az adott színnel");
+			elem.setReachable(true);
+		}else System.out.println("Az elem nem spec. falat talált el így nem tudott kaput nyitni.");
 		
     }
     
