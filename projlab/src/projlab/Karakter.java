@@ -169,9 +169,29 @@ public class Karakter {
     /**
      * @param dir
      */
-    public void Drop(Vektor dir) {
-        // TODO implement here
-    }
     
-
-}
+    	public static void Drop(Vektor dir) {
+        	System.out.println("Karakter.Drop:Karakternél van doboz? I/N");
+    		try {
+    			answer=in.readLine();
+    		} catch (IOException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+    			if(answer.toUpperCase().equals("I"))
+    			{
+    				Elem e=	Labirintus.WhatsThere(new Terulet());
+    				
+    				if(e.getReachable()==true){
+    					Labirintus.AddElem(new Doboz());
+    					Karakter.changeBoxVal();
+    					try {
+    						e.Activate(new Karakter());
+    					} catch (Exception e1) {
+    						// TODO Auto-generated catch block
+    						e1.printStackTrace();
+    					}
+    				}
+    			}
+        }
+    }
