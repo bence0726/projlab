@@ -34,9 +34,9 @@ public class Fegyver {
     public static void Fire(Vektor dir, String szin, Karakter kar) {
     	BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     	Elem elem=null;
-    	while (elem == null)
-    		elem = Labirintus.WhatsThere(new Terulet());
-		if (elem.getReachable() && elem.getFireable()){
+    	while (elem == null)								//A lövedék mindenképp beleütközik valamiben
+    		elem = Labirintus.WhatsThere(new Terulet()); 	//legalább a pálya szélébe
+		if ((elem.getReachable()==false) && elem.getFireable()){//ha nem elérhető és lőhető akkor specfal,amin kapu nyitható
 			System.out.println("Tehát a lövedék speciális falat talált el,a portál létrejött az adott színnel");
 			elem.setReachable(true);
 		}else System.out.println("Az elem nem spec. falat talált el így nem tudott kaput nyitni.");
