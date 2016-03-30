@@ -16,28 +16,28 @@ public abstract class Elem {
     /**
      * 
      */
-    private boolean reachable;
+   // private boolean reachable;
 
     /**
      * 
      */
-    private boolean fireable;
+   // private boolean fireable;
 
     /**
      * 
      */
-    private boolean pickable;
+   // private boolean pickable;
 
     /**
      * 
      */
-    private File image;
+   // private File image;
 
 
     /**
      * 
      */
-    private Terulet pos;
+   // private Terulet pos;
 
     /**
      * @param img

@@ -60,34 +60,7 @@ public class Menu {
 						;
 					break;
 						
-		case 4:System.out.println("4.1 A karakternél van doboz? I/N");
-				answer=in.readLine();
-				if(answer.toUpperCase().equals("N"))
-				{
-					System.out.println("4.2 Talál valamit a karakter maga előtt? I/N");
-						answer=in.readLine();
-							if(answer.toUpperCase().equals("I"))
-							{
-								System.out.println("4.3 Felvehető? I/N");
-									answer=in.readLine();
-										if(answer.toUpperCase().equals("I"))
-										{
-											System.out.println("4.4 Volt valami alatta? I/N");
-												answer=in.readLine();
-													if(answer.toUpperCase().equals("I"))
-														;
-													else
-														;
-										}
-										else
-											;
-							}
-							else
-								;
-				}
-				else
-					
-				break;
+		case 4:Karakter.Pick(new Vektor());
 		
 		case 5:System.out.println("5.1 A karakternél van doboz? I/N");
 				answer=in.readLine();
