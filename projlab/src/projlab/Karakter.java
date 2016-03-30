@@ -127,7 +127,7 @@ public class Karakter {
         
         System.out.println("Karakter.Move():: Kedves labirintus: mire készülök rálépni?");
     	Elem  e = Labirintus.WhatsThere(new Terulet());
-        if(e == null)return;
+        
         System.out.println("Karakter.Move():: Kedves elem: rádléphetek?");
         if(!e.getReachable())		//Ha nem lehet rálépni, return!
         	return;
@@ -136,6 +136,7 @@ public class Karakter {
         	itteni.deActivate();    //az alattunk levő mezőt
         
         Karakter.setPos(new Vektor());
+        if(e == null)return;
         e.Activate(new Karakter());
     }
 

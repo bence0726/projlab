@@ -32,34 +32,15 @@ public class Menu {
 		n=menu.nextInt();
 		
 		switch(n){
-		
-		
-		case 1:	System.out.println("1.1 A karakter előtt van valami?  I/N ");
-				answer=in.readLine();	
-				if(answer.toUpperCase().equals("I"))
-				{
-					System.out.println("1.2 Az a valami ráléphető?  I/N ");
-					answer=in.readLine();
-					if(answer.toUpperCase().equals("I"))
-						;
-					else
-						;
-				}
-				else
-					;
-				break;
-				
-		case 2: Karakter.Move(new Vektor());
-				break;
-				
-		case 3:System.out.println("3.1 A karakter talál utat a mérlegről lelépve? I/N");
-				answer=in.readLine();
-					if(answer.toUpperCase().equals("I"))
-						;
-					else
-						;
-					break;
-						
+		case 1:
+			Karakter.Move(new Vektor());
+			break;		
+		case 2:
+			Karakter.Move(new Vektor());
+			break;
+		case 3:
+			Karakter.Move(new Vektor());
+			break;
 		case 4:Karakter.Pick(new Vektor());
 		
 		case 5:System.out.println("5.1 A karakternél van doboz? I/N");
