@@ -86,8 +86,6 @@ public class Menu {
 					;
 				break;
 		case 6: Fegyver.Fire(new Vektor(), "sarga", new Karakter());
-			
-			
 				break;
 		case 7:Karakter.Move(new Vektor());
 				break;

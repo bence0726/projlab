@@ -26,35 +26,21 @@ public class Fegyver {
     }
 
     /**
+     * Megvalósítja a kapuk nyitását.
      * @param dir 
      * @param szin 
      * @param kar
      */
     public static void Fire(Vektor dir, String szin, Karakter kar) {
     	BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    	Menu.n=10;
-    	Elem elem = Labirintus.WhatsThere(new Terulet());
-    	
-		String answer;
-		try {
-			System.out.println("Idaig eljutottam");
-			answer = in.readLine();
-			if(answer.toUpperCase().equals("I"))
-			{
-				System.out.println("Idaig is");
+    	Elem elem=null;
+    	while (elem == null)
+    		elem = Labirintus.WhatsThere(new Terulet());
 				if (elem.getReachable() && elem.getFireable())
-				{System.out.println("Tehát a lövedék speciális falat talált el");
+				{System.out.println("Tehát a lövedék speciális falat talált el,a portál létrejött az adott színnel");
 					elem.setReachable(true);
 					}
 						else System.out.println("Az elem nem spec. falat talált el így nem tudott kaput nyitni.");
-							;
-			}
-			else System.out.println("Sajnos nem talált el semmit.");
-				;
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
     }
     
