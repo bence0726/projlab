@@ -16,12 +16,12 @@ public class Merleg extends Elem {
     /**
      * 
      */
-    private boolean aktiv;
+    //private boolean aktiv;
 
     /**
      * 
      */
-    private Fal ajto;
+    //private Fal ajto;
 
 	@Override
 	public void Activate(Karakter k) {

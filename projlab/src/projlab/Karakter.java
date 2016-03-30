@@ -1,6 +1,8 @@
 package projlab;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 import javax.swing.text.Position;
@@ -55,6 +57,9 @@ public class Karakter {
      * @param lab 
      * @param img
      */
+    static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	static String answer;
+	
     public void Karakter(Labirintus lab, File img) {
         // TODO implement here
     }
@@ -96,8 +101,8 @@ public class Karakter {
     /**
      * 
      */
-    public void changeBoxVal() {
-        // TODO implement here
+    public static void changeBoxVal() {
+    	System.out.println("Karakter.changeBoxVal(): Felvettünk vagy letettünk egy dobozt.");
     }
 
     /**
@@ -121,8 +126,40 @@ public class Karakter {
     /**
      * @param dir
      */
-    public void Pick(Vektor dir) {
-        // TODO implement here
+    public static void Pick(Vektor dir) {
+    	System.out.println("Karakter.Pick::Karakternél van doboz? I/N");
+		try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			if(answer.toUpperCase().equals("I"))
+			{
+		
+			} else{
+				try {
+					Elem e=	Labirintus.WhatsThere(new Terulet());
+					
+					if(e.getPickable()==true)
+						try {
+							e.Activate(new Karakter());
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					Karakter.changeBoxVal();
+					Labirintus.RemoveElem(e);
+						
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+					
+			
+			}
+				
+				
     }
 
     /**
