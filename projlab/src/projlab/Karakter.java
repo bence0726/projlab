@@ -90,8 +90,16 @@ public class Karakter {
      * @return
      */
     public int getZPM() {
-        System.out.println("Karakter.getZPM:: Küldöm a ZPM-eim számát.");
-        return 1;//TODO most fix, később módosítani!
+        System.out.println("Labirintus.getZPM(): Kedves Felhasználó, hány ZPM-e van a karakternek?");
+        int i = 0;
+        try {
+			String szam=in.readLine();
+			i = Integer.parseInt(szam);//string --> int
+		} catch (IOException e) {
+			// TODO Majd töröld ki, csak szkeleton miatt kell
+			e.printStackTrace();
+		}
+        return i;
     }
     
     public Fegyver getFegyver(){
@@ -137,8 +145,9 @@ public class Karakter {
         System.out.println("Karakter.Move():: Kedves elem: rádléphetek?");
         if(!e.getReachable())		//Ha nem lehet rálépni, return!
         	return;
-        e.Activate(new Karakter());
+        
         Karakter.setPos(new Vektor());
+        e.Activate(new Karakter());
     }
 
     /**
