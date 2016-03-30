@@ -45,14 +45,6 @@ public class Labirintus {
     public static Elem WhatsThere(Terulet ter) throws IOException {
     	
     switch(Menu.n){
-    case 7:
-    	System.out.println("Labirintus.WhatsThere():: A karakter portálba lépett? I/N");
-    	answer=in.readLine();
-    		if(answer.toUpperCase().equals("I"))
-    		{
-    				return new SpecFal();
-    		}
-    		return null;
     case 8:
     	System.out.println("Labirintus.WhatsThere():: A karakter ZPM-re lépett? I/N");
     	answer=in.readLine();
