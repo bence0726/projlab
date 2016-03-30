@@ -154,23 +154,17 @@ public class Karakter {
 			{
 		
 			} else{
-				try {
-					Elem e=	Labirintus.WhatsThere(new Terulet());
-					
-					if(e.getPickable()==true)
-						try {
-							e.Activate(new Karakter());
-						} catch (Exception e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-					Karakter.changeBoxVal();
-					Labirintus.RemoveElem(e);
-						
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				Elem e=	Labirintus.WhatsThere(new Terulet());
+				
+				if(e.getPickable()==true)
+					try {
+						e.Activate(new Karakter());
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				Karakter.changeBoxVal();
+				Labirintus.RemoveElem(e);
 					
 			
 			}
