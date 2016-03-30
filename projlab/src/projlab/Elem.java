@@ -37,12 +37,12 @@ public abstract class Elem {
      * @param img
      */
     public Elem(File img, boolean reach, boolean fire, boolean pick, Terulet po) {
-    	System.out.println("Elem:: Létrejön egy elem a megadott paraméterek alapján.");
-    	this.fireable=fire;
-    	this.image=img;
-    	this.pickable=pick;
-    	this.pos=po;
-    	this.reachable=reach;
+    	//System.out.println("Elem:: Létrejön egy elem a megadott paraméterek alapján.");
+    	//this.fireable=fire;
+    	//this.image=img;
+    	//this.pickable=pick;
+    	//this.pos=po;
+    	//this.reachable=reach;
     	
     }
 
