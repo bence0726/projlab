@@ -148,7 +148,7 @@ public abstract class Elem {
     /**
      * @param k
      */
-    public abstract void Activate(Karakter k) throws Exception;
+    public abstract void Activate(Karakter k);
 
     /**
      * 

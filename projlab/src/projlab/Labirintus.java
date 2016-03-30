@@ -59,6 +59,15 @@ public class Labirintus {
         		return new Szakadek();
         	}
         	return null;//Ha nincs itt semmi, null-t adunk vissza.
+        case 42:
+        	System.out.println("Labirintus.WhatsThere():: A karakter alatt van valami? I/N");
+        	answer=in.readLine();
+        	if(answer.toUpperCase().equals("I"))
+        	{
+        		return new VegeElem();	//majdnem mindegy, hogy mi, nem lényeges,
+        								//csak rá lehessen lépni.
+        	}
+        	return null;//Ha nincs itt semmi, null-t adunk vissza.
         case 10: 
         		System.out.println("Labirintus.WhatsThere():: A karakter a vége elemre került? I/N");
         		answer=in.readLine();

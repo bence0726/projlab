@@ -102,18 +102,34 @@ public class Karakter {
 
     /**
      * @param dir
-     * @throws Exception 
      */
-    public static void Move(Vektor dir) throws Exception {
-        System.out.println("Karakter.Move():: Kedves labirintus: mi van itt?");
+    //Csupán azért van szükség ilyen menüpont-mágiára,
+    //mert nem mentünk el értékeket, így minden metódushívásnál
+    //new Object()-et kap kb minden függvény. Későbbi release-ekből
+    //ezeket kivezetjük...
+    public static void Move(Vektor dir){
+    	//itt most gonoszul módosítani fogom a megnyomott gomb értékét,
+        //de készül róla backup:
+        int megnyomottMenu = Menu.n;//elkérjük a megnyomott menügomb értékét
         
-        Elem  e = Labirintus.WhatsThere(new Terulet());
+        Menu.n = 42;//ebből fogja tudni a WhatsThere(),      									//hogy mi a szitu
+    	System.out.println("Karakter.Move():: Kedves labirintus: miről készülök lelépni?");
+        //Megvizsgáljuk, hogy a karakter helyén van-e elem.
+        Elem itteni = Labirintus.WhatsThere(new Karakter().getPos());
+    	
+        //Visszaállítom a menügombot:
+        Menu.n = megnyomottMenu;
+        System.out.println("Karakter.Move():: Kedves labirintus: mire készülök rálépni?");
+    	Elem  e = Labirintus.WhatsThere(new Terulet());
         if(e == null)return;
+        System.out.println("Karakter.Move():: Kedves elem: rádléphetek?");
         if(!e.getReachable())//Ha nem lehet rálépni, return!
         	return;
+                
+        if(itteni != null)//Ha el tudunk lépni, deaktiváljuk az alattunk levő mezőt
+        	itteni.deActivate();      
+        
         Karakter.setPos(new Vektor());
-        
-        
         e.Activate(new Karakter());
         
     }
