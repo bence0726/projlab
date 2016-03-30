@@ -200,14 +200,6 @@ public class Karakter {
 						e1.printStackTrace();
 					}
 				}
-					
-					
-					
-			
 			}
-				
-		
     }
-    
-
 }
