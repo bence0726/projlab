@@ -32,27 +32,30 @@ public class Fegyver {
      */
     public static void Fire(Vektor dir, String szin, Karakter kar) {
     	BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    	System.out.println("6.1 A lövedék eltalált valamit? I/N");
+    	Menu.n=10;
+    	Elem elem = Labirintus.WhatsThere(new Terulet());
+    	
 		String answer;
 		try {
+			System.out.println("Idaig eljutottam");
 			answer = in.readLine();
+			if(answer.toUpperCase().equals("I"))
+			{
+				System.out.println("Idaig is");
+				if (elem.getReachable() && elem.getFireable())
+				{System.out.println("Tehát a lövedék speciális falat talált el");
+					elem.setReachable(true);
+					}
+						else System.out.println("Az elem nem spec. falat talált el így nem tudott kaput nyitni.");
+							;
+			}
+			else System.out.println("Sajnos nem talált el semmit.");
+				;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(answer.toUpperCase().equals("I"))
-		{
-			System.out.println("6.2 Amit eltalált speciális fal volt? I/N");
-				answer=in.readLine();
-					if(answer.toUpperCase().equals("N"))
-					{
-				
-					}
-					else
-						;
-		}
-		else
-			;
+		
     }
     
     public SpecFal getSargaP(){

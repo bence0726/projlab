@@ -27,14 +27,14 @@ public class Merleg extends Elem {
 	public void Activate(Karakter k) {
 		System.out.println("Merleg.Activate:: Aktiválódik a merleg.");
 		Fal tmp=new Fal();
-		tmp.setReachable();		
+		tmp.setReachable(true);		
 	}
 
 	@Override
 	public void deActivate() {
 		System.out.println("Merleg.deActivate:: Deaktiválódik a merleg.");
 		Fal tmp=new Fal();
-		tmp.setReachable();
+		tmp.setReachable(false);
 		
 	}
 
