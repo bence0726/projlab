@@ -54,7 +54,10 @@ public class Labirintus {
 			return null;
         case 6:
     		System.out.println("6.1 A lövedék eltalált valamit? I/N");
-    		
+    		answer=in.readLine();
+        	if(answer.toUpperCase().equals("I"))
+        		return new SpecFal();
+        	return null;//Ha nincs itt semmi, null-t adunk vissza.
         case 8:
         	System.out.println("Labirintus.WhatsThere():: A karakter ZPM-re lépett? I/N");
         	answer=in.readLine();

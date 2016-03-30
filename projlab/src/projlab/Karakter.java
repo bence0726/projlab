@@ -167,8 +167,7 @@ public class Karakter {
 				Labirintus.RemoveElem(e);
 					
 			
-			}
-				
+			}	
 				
     }
 
