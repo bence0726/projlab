@@ -33,7 +33,7 @@ public class Labirintus {
     /**
      * @param param
      */
-    public void RemoveElem(Elem param) {
+    public static void RemoveElem(Elem param) {
         System.out.println("Labirintus.RemoveElem():: A kapott elemet kidobtam a listámból.");
     }
 
@@ -42,33 +42,38 @@ public class Labirintus {
      * @return
      * @throws IOException 
      */
-    public static Elem WhatsThere(Terulet ter) throws IOException {
-    	
-    switch(Menu.n){
-    case 8:
-    	System.out.println("Labirintus.WhatsThere():: A karakter ZPM-re lépett? I/N");
-    	answer=in.readLine();
-    	if(answer.toUpperCase().equals("I"))
-    		return new ZPM();
+    public static Elem WhatsThere(Terulet ter){
+    try{
+    	switch(Menu.n){
+        case 8:
+        	System.out.println("Labirintus.WhatsThere():: A karakter ZPM-re lépett? I/N");
+        	answer=in.readLine();
+        	if(answer.toUpperCase().equals("I"))
+        		return new ZPM();
+        	return null;//Ha nincs itt semmi, null-t adunk vissza.
+        case 9:
+        	System.out.println("Labirintus.WhatsThere():: A karakter szakadékba lépett? I/N");
+        	answer=in.readLine();
+        	if(answer.toUpperCase().equals("I"))
+        	{
+        		return new Szakadek();
+        	}
+        	return null;//Ha nincs itt semmi, null-t adunk vissza.
+        case 10: 
+        		System.out.println("Labirintus.WhatsThere():: A karakter a vége elemre került? I/N");
+        		answer=in.readLine();
+        		if(answer.toUpperCase().equals("I"))
+        			return new VegeElem();
+        		else return null;//Ha nincs itt semmi, null-t adunk vissza.
+        }
     	return null;//Ha nincs itt semmi, null-t adunk vissza.
-    case 9:
-    	System.out.println("Labirintus.WhatsThere():: A karakter szakadékba lépett? I/N");
-    	answer=in.readLine();
-    	if(answer.toUpperCase().equals("I"))
-    	{
-    		return new Szakadek();
-    	}
-    	return null;//Ha nincs itt semmi, null-t adunk vissza.
-    case 10: 
-    		System.out.println("Labirintus.WhatsThere():: A karakter a vége elemre került? I/N");
-    		answer=in.readLine();
-    		if(answer.toUpperCase().equals("I"))
-    			return new VegeElem();
-    		else return null;//Ha nincs itt semmi, null-t adunk vissza.
+        		
+    }catch(IOException e){
+    	e.printStackTrace();
     }
-	return null;//Ha nincs itt semmi, null-t adunk vissza.
-    		
-    }
+	return null;
+   }
+    
         
     
 

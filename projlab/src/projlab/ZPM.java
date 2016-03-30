@@ -13,11 +13,14 @@ public class ZPM extends Elem {
     }
 
 	/**
-	 * 
+	 * A karakter ZPM-számlálóját inkrementálja, 
+	 * majd letörölteti magát a labirintusról.
 	 */
 	public void Activate(Karakter k) {
 		System.out.println("ZPM.Activate():: Meghívom Karakter.addZPM() metódust...\n");
 		k.addZPM();
+		System.out.println("ZPM.Activate():: Megkérem a Labirintust, hogy töröljön engem...\n");
+		Labirintus.RemoveElem(new ZPM());
 		
 	}
 

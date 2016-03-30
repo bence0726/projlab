@@ -16,40 +16,40 @@ public class Karakter {
     public Karakter() {
     }
 
-    /**
-     * 
-     */
-    private int ZPM;
-
-    /**
-     * 
-     */
-    private int PickRange;
-
-    /**
-     * 
-     */
-    private boolean GotBox;
-
-    /**
-     * 
-     */
-    private Elem LastMove;
-
-    /**
-     * 
-     */
-    private Fegyver fegyver;
-
-    /**
-     * 
-     */
-    private Labirintus lab;
-
-    /**
-     * 
-     */
-    private Terulet pos;
+//    /**
+//     * 
+//     */
+//    private int ZPM;
+//
+//    /**
+//     * 
+//     */
+//    private int PickRange;
+//
+//    /**
+//     * 
+//     */
+//    private boolean GotBox;
+//
+//    /**
+//     * 
+//     */
+//    private Elem LastMove;
+//
+//    /**
+//     * 
+//     */
+//    private Fegyver fegyver;
+//
+//    /**
+//     * 
+//     */
+//    private Labirintus lab;
+//
+//    /**
+//     * 
+//     */
+//    private Terulet pos;
 
     /**
      * @param lab 
