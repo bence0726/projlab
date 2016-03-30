@@ -46,7 +46,7 @@ public class Labirintus {
     try{
     	switch(Menu.n){
     	case 1:
-    		System.out.println("1.1 A karakter előtt van valami?  I/N ");
+    		System.out.println("Labirintus.WhatsThere():: A karakter előtt van valami?  I/N ");
 			answer=in.readLine();
 			if(answer.toUpperCase().equals("I"))
 				return new VegeElem();
