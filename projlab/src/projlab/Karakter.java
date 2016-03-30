@@ -117,7 +117,7 @@ public class Karakter {
     								//de készül róla backup:
         int megnyomottMenu = Menu.n;//elkérjük a megnyomott menügomb értékét
         
-        Menu.n = 42;				//ebből fogja tudni a WhatsThere(),      									//hogy mi a szitu
+        Menu.n = 42;				//ebből fogja tudni a WhatsThere(), hogy mi a szitu
     	System.out.println("Karakter.Move()::"
     			+ " Kedves labirintus: miről készülök lelépni?");
        								//Megvizsgáljuk, hogy a karakter helyén van-e elem.
@@ -142,34 +142,28 @@ public class Karakter {
     /**
      * @param dir
      */
+  //Csupán azért van szükség ilyen menüpont-mágiára,
+    //mert nem mentünk el értékeket, így minden metódushívásnál
+    //new Object()-et kap kb minden függvény. Későbbi release-ekből
+    //ezeket kivezetjük...
     public static void Pick(Vektor dir) {
-    	System.out.println("Karakter.Pick::Karakternél van doboz? I/N");
-		try {
-			answer=in.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			if(answer.toUpperCase().equals("I"))
-			{
+		//itt most gonoszul módosítani fogom a megnyomott gomb értékét,
+		//de készül róla backup:
+    	int megnyomottMenu = Menu.n;//elkérjük a megnyomott menügomb értékét
+
+    	Menu.n = 43;				//ebből fogja tudni a WhatsThere(), hogy mi a szitu
+    	System.out.println("Karakter.Move()::"
+    			+ " Kedves labirintus: Van nálam doboz?");
+			//Megvizsgáljuk, hogy a karakter helyén van-e elem.
+    	Elem itteni = Labirintus.WhatsThere(new Karakter().getPos());
 		
-			} else{
-				Elem e=	Labirintus.WhatsThere(new Terulet());
-				
-				if(e.getPickable()==true)
-					try {
-						e.Activate(new Karakter());
-					} catch (Exception e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-				Karakter.changeBoxVal();
-				Labirintus.RemoveElem(e);
-					
-			
-			}
-				
-				
+    	Menu.n = megnyomottMenu;	//Visszaállítom a menügombot
+
+    	Elem e=	Labirintus.WhatsThere(new Terulet());
+    	if(e.getPickable()==true)
+    		e.Activate(new Karakter());
+    	Karakter.changeBoxVal();
+    	Labirintus.RemoveElem(e);	
     }
 
     /**
