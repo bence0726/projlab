@@ -26,8 +26,8 @@ public class Labirintus {
     /**
      * @param param
      */
-    public void AddElem(Elem param) {
-        // TODO implement here
+    public static void AddElem(Elem param) {
+    	System.out.println("Labirintus.AddElem():: A kapott elemet hozzáfűzi a listához.");
     }
 
     /**

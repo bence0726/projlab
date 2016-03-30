@@ -62,29 +62,7 @@ public class Menu {
 						
 		case 4:Karakter.Pick(new Vektor());
 		
-		case 5:System.out.println("5.1 A karakternél van doboz? I/N");
-				answer=in.readLine();
-				if(answer.toUpperCase().equals("I"))
-				{
-					System.out.println("5.2 A karakter előtt nincs semmi? I/N");
-						answer=in.readLine();
-							if(answer.toUpperCase().equals("N"))
-							{
-								System.out.println("5.3 Rakható rá doboz? I/N");
-									answer=in.readLine();
-										if(answer.toUpperCase().equals("I"))
-										{
-									
-										}
-										else
-											;
-							}
-							else
-								;
-				}
-				else
-					;
-				break;
+		case 5:Karakter.Drop(new Vektor());
 		case 6: Fegyver.Fire(new Vektor(), "sarga", new Karakter());
 			
 			

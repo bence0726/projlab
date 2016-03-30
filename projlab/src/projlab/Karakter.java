@@ -134,27 +134,19 @@ public class Karakter {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			if(answer.toUpperCase().equals("I"))
+			if(answer.toUpperCase().equals("N"))
 			{
-		
-			} else{
-				try {
-					Elem e=	Labirintus.WhatsThere(new Terulet());
-					
-					if(e.getPickable()==true)
-						try {
-							e.Activate(new Karakter());
-						} catch (Exception e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-					Karakter.changeBoxVal();
-					Labirintus.RemoveElem(e);
-						
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				Elem e=	Labirintus.WhatsThere(new Terulet());
+				
+				if(e.getPickable()==true)
+					try {
+						e.Activate(new Karakter());
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				Karakter.changeBoxVal();
+				Labirintus.RemoveElem(e);
 					
 			
 			}
@@ -165,8 +157,35 @@ public class Karakter {
     /**
      * @param dir
      */
-    public void Drop(Vektor dir) {
-        // TODO implement here
+    public static void Drop(Vektor dir) {
+    	System.out.println("Karakter.Drop:Karakternél van doboz? I/N");
+		try {
+			answer=in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			if(answer.toUpperCase().equals("I"))
+			{
+				Elem e=	Labirintus.WhatsThere(new Terulet());
+				
+				if(e.getReachable()==true){
+					Labirintus.AddElem(new Doboz());
+					Karakter.changeBoxVal();
+					try {
+						e.Activate(new Karakter());
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}
+					
+					
+					
+			
+			}
+				
+		
     }
     
 
