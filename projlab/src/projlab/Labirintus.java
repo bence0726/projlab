@@ -33,7 +33,7 @@ public class Labirintus {
     /**
      * @param param
      */
-    public void RemoveElem(Elem param) {
+    public static void RemoveElem(Elem param) {
         System.out.println("Labirintus.RemoveElem():: A kapott elemet kidobtam a listámból.");
     }
 
@@ -45,7 +45,14 @@ public class Labirintus {
     public static Elem WhatsThere(Terulet ter) throws IOException {
     	
     switch(Menu.n){
-    case 8:
+    case 2:System.out.println("Labirintus.WhatsThere():: Talál valamit a karakter maga előtt? I/N");
+		answer=in.readLine();
+		if(answer.toUpperCase().equals("I"))
+			return new Doboz();
+		else 
+			return null;
+		
+	case 8:
     	System.out.println("Labirintus.WhatsThere():: A karakter ZPM-re lépett? I/N");
     	answer=in.readLine();
     	if(answer.toUpperCase().equals("I"))
