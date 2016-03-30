@@ -129,7 +129,7 @@ public class Karakter {
     	Elem  e = Labirintus.WhatsThere(new Terulet());
         if(e == null)return;
         System.out.println("Karakter.Move():: Kedves elem: rádléphetek?");
-        if(e.getReachable())		//Ha nem lehet rálépni, return!
+        if(!e.getReachable())		//Ha nem lehet rálépni, return!
         	return;
                 
         if(itteni != null)			//Ha el tudunk lépni, deaktiváljuk  

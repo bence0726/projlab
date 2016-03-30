@@ -45,7 +45,8 @@ public class Labirintus {
     public static Elem WhatsThere(Terulet ter){
     try{
     	switch(Menu.n){
-    	
+    	case 1:
+    		
     	case 2:System.out.println("Labirintus.WhatsThere():: Talál valamit a karakter maga előtt? I/N");
 		answer=in.readLine();
 		if(answer.toUpperCase().equals("I"))
